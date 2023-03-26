@@ -45,9 +45,11 @@ class AnimSearchBar extends StatefulWidget {
   final Function(String) onSubmitted;
   final TextInputAction textInputAction;
   final double? tamagnoIcono;
+  final int? estado;
 
   const AnimSearchBar({
     Key? key,
+    this.estado = 0,
 
     /// The width cannot be null
     required this.width,
@@ -141,6 +143,7 @@ class _AnimSearchBarState extends State<AnimSearchBar>
 
   @override
   Widget build(BuildContext context) {
+    toggle = widget.estado ?? toggle;
     return Container(
       height: widget.height,
 
