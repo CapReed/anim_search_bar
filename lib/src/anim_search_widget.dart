@@ -27,6 +27,8 @@ class AnimSearchBar extends StatefulWidget {
   final TextEditingController textController;
   final Icon? suffixIcon;
   final Icon? prefixIcon;
+  final IconData? primeroIcon;
+
   final String helpText;
   final int animationDurationInMilli;
   final onSuffixTap;
@@ -54,6 +56,7 @@ class AnimSearchBar extends StatefulWidget {
     required this.textController,
     this.suffixIcon,
     this.prefixIcon,
+    this.primeroIcon,
     this.helpText = "Search...",
 
     /// Height of wrapper container
@@ -323,12 +326,12 @@ class _AnimSearchBarState extends State<AnimSearchBar>
                 icon: widget.prefixIcon != null
                     ? toggle == 1
                         ? Icon(
-                            Icons.abc,
+                            widget.primeroIcon!,
                             color: widget.textFieldIconColor,
                           )
                         : widget.prefixIcon!
                     : Icon(
-                        toggle == 1 ? Icons.abc : Icons.search,
+                        toggle == 1 ? widget.primeroIcon! : Icons.search,
                         // search icon color when closed
                         color: toggle == 0
                             ? widget.searchIconColor
