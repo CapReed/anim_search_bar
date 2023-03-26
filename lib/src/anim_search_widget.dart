@@ -255,7 +255,7 @@ class _AnimSearchBarState extends State<AnimSearchBar>
                 opacity: (toggle == 0) ? 0.0 : 1.0,
                 duration: Duration(milliseconds: 200),
                 child: Container(
-                  padding: const EdgeInsets.only(left: 10, right: 10),
+                  padding: const EdgeInsets.only(left: 8, right: 12),
                   alignment: Alignment.topCenter,
                   width: widget.width / 1.7,
                   child: TextField(
