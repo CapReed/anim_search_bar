@@ -255,8 +255,8 @@ class _AnimSearchBarState extends State<AnimSearchBar>
                 opacity: (toggle == 0) ? 0.0 : 1.0,
                 duration: Duration(milliseconds: 200),
                 child: Container(
-                  padding: const EdgeInsets.only(left: 10),
-                  alignment: Alignment.center,
+                  padding: const EdgeInsets.only(left: 10, right: 10),
+                  alignment: Alignment.topCenter,
                   width: widget.width / 1.7,
                   child: TextField(
                     ///Text Controller. you can manipulate the text inside this textField by calling this controller.
