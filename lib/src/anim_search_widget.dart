@@ -56,7 +56,7 @@ class AnimSearchBar extends StatefulWidget {
     required this.textController,
     this.suffixIcon,
     this.prefixIcon,
-    this.primeroIcon,
+    this.primeroIcon = Icons.search,
     this.helpText = "Search...",
 
     /// Height of wrapper container
