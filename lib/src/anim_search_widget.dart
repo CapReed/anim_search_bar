@@ -143,7 +143,7 @@ class _AnimSearchBarState extends State<AnimSearchBar>
 
   @override
   Widget build(BuildContext context) {
-    toggle = widget.estado ?? toggle;
+    //toggle = widget.estado ?? toggle;
     if (textFieldValue.isNotEmpty) {
       toggle = 1;
     }
