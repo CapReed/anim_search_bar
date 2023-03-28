@@ -110,7 +110,7 @@ class AnimSearchBar extends StatefulWidget {
 
 ///toggle - 0 => false or closed
 ///toggle 1 => true or open
-int toggle = 0;
+int toggle = 1;
 
 /// * use this variable to check current text from OnChange
 String textFieldValue = '';
