@@ -110,7 +110,7 @@ class AnimSearchBar extends StatefulWidget {
 
 ///toggle - 0 => false or closed
 ///toggle 1 => true or open
-int toggle = 1;
+int toggle = 0;
 
 /// * use this variable to check current text from OnChange
 String textFieldValue = '';
@@ -144,9 +144,9 @@ class _AnimSearchBarState extends State<AnimSearchBar>
   @override
   Widget build(BuildContext context) {
     //toggle = widget.estado ?? toggle;
-    if (textFieldValue.isNotEmpty) {
-      toggle = 1;
-    }
+    // if (textFieldValue.isNotEmpty) {
+    //   toggle = 1;
+    // }
     return Container(
       height: widget.height,
 
