@@ -162,7 +162,7 @@ class _AnimSearchBarState extends State<AnimSearchBar>
         decoration: BoxDecoration(
           /// can add custom  color or the color will be white
           color: toggle == 1 ? widget.textFieldColor : widget.color,
-          borderRadius: BorderRadius.circular(30.0),
+          borderRadius: BorderRadius.circular(20.0),
 
           /// show boxShadow unless false was passed
           boxShadow: !widget.boxShadow
@@ -262,7 +262,7 @@ class _AnimSearchBarState extends State<AnimSearchBar>
                 opacity: (toggle == 0) ? 0.0 : 1.0,
                 duration: Duration(milliseconds: 200),
                 child: Container(
-                  padding: const EdgeInsets.only(left: 8, right: 12),
+                  padding: const EdgeInsets.only(left: 8, right: 25),
                   width: widget.width /
                       1.5, //NO QUITAR LA DIVISION O DEJA DE FUNCIONAR
                   child: TextField(
@@ -323,7 +323,8 @@ class _AnimSearchBarState extends State<AnimSearchBar>
               /// can add custom color or the color will be white
               /// toggle button color based on toggle state
               color: toggle == 0 ? widget.color : widget.textFieldColor,
-              borderRadius: BorderRadius.circular(30.0),
+              //color: Colors.red,
+              borderRadius: BorderRadius.circular(20.0),
               child: IconButton(
                 splashRadius: 19.0,
 
