@@ -254,7 +254,8 @@ class _AnimSearchBarState extends State<AnimSearchBar>
               duration: Duration(milliseconds: widget.animationDurationInMilli),
               left: (toggle == 0) ? 20.0 : 40.0,
               curve: Curves.easeOut,
-              top: 11.0,
+              top: 5.0,
+              bottom: 5.0,
 
               ///Using Animated opacity to change the opacity of th textField while expanding
               child: AnimatedOpacity(
@@ -262,7 +263,8 @@ class _AnimSearchBarState extends State<AnimSearchBar>
                 duration: Duration(milliseconds: 200),
                 child: Container(
                   padding: const EdgeInsets.only(left: 8, right: 12),
-                  width: widget.width / 1.5,
+                  width: widget.width /
+                      1.5, //NO QUITAR LA DIVISION O DEJA DE FUNCIONAR
                   child: TextField(
                     ///Text Controller. you can manipulate the text inside this textField by calling this controller.
                     controller: widget.textController,
