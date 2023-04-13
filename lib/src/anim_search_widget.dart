@@ -179,76 +179,73 @@ class _AnimSearchBarState extends State<AnimSearchBar>
         child: Stack(
           children: [
             ///Using Animated Positioned widget to expand and shrink the widget
-            Positioned.fill(
-              child: AnimatedPositioned(
-                duration:
-                    Duration(milliseconds: widget.animationDurationInMilli),
-                top: 6.0,
-                right: 7.0,
-                curve: Curves.easeOut,
-                child: AnimatedOpacity(
-                  opacity: (toggle == 0) ? 0.0 : 1.0,
-                  duration: Duration(milliseconds: 200),
-                  child: Container(
-                    padding: EdgeInsets.all(8.0),
-                    decoration: BoxDecoration(
-                      /// can add custom color or the color will be white
-                      color: widget.color,
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                    child: AnimatedBuilder(
-                      child: GestureDetector(
-                        onTap: () {
-                          try {
-                            ///trying to execute the onSuffixTap function
-                            widget.onSuffixTap();
+            AnimatedPositioned(
+              duration: Duration(milliseconds: widget.animationDurationInMilli),
+              top: 6.0,
+              right: 7.0,
+              curve: Curves.easeOut,
+              child: AnimatedOpacity(
+                opacity: (toggle == 0) ? 0.0 : 1.0,
+                duration: Duration(milliseconds: 200),
+                child: Container(
+                  padding: EdgeInsets.all(8.0),
+                  decoration: BoxDecoration(
+                    /// can add custom color or the color will be white
+                    color: widget.color,
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  child: AnimatedBuilder(
+                    child: GestureDetector(
+                      onTap: () {
+                        try {
+                          ///trying to execute the onSuffixTap function
+                          widget.onSuffixTap();
 
-                            // * if field empty then the user trying to close bar
-                            if (textFieldValue == '') {
-                              unfocusKeyboard();
-                              setState(() {
-                                toggle = 0;
-                              });
+                          // * if field empty then the user trying to close bar
+                          if (textFieldValue == '') {
+                            unfocusKeyboard();
+                            setState(() {
+                              toggle = 0;
+                            });
 
-                              ///reverse == close
-                              _con.reverse();
-                            }
-
-                            // * why not clear textfield here?
-                            widget.textController.clear();
-                            textFieldValue = '';
-
-                            ///closeSearchOnSuffixTap will execute if it's true
-                            if (widget.closeSearchOnSuffixTap) {
-                              unfocusKeyboard();
-                              setState(() {
-                                toggle = 0;
-                              });
-                            }
-                          } catch (e) {
-                            ///print the error if the try block fails
-                            print(e);
+                            ///reverse == close
+                            _con.reverse();
                           }
-                        },
 
-                        ///suffixIcon is of type Icon
-                        child: widget.suffixIcon != null
-                            ? widget.suffixIcon
-                            : Icon(
-                                Icons.close,
-                                size: 20.0,
-                                color: widget.textFieldIconColor,
-                              ),
-                      ),
-                      builder: (context, widget) {
-                        ///Using Transform.rotate to rotate the suffix icon when it gets expanded
-                        return Transform.rotate(
-                          angle: _con.value * 2.0 * pi,
-                          child: widget,
-                        );
+                          // * why not clear textfield here?
+                          widget.textController.clear();
+                          textFieldValue = '';
+
+                          ///closeSearchOnSuffixTap will execute if it's true
+                          if (widget.closeSearchOnSuffixTap) {
+                            unfocusKeyboard();
+                            setState(() {
+                              toggle = 0;
+                            });
+                          }
+                        } catch (e) {
+                          ///print the error if the try block fails
+                          print(e);
+                        }
                       },
-                      animation: _con,
+
+                      ///suffixIcon is of type Icon
+                      child: widget.suffixIcon != null
+                          ? widget.suffixIcon
+                          : Icon(
+                              Icons.close,
+                              size: 20.0,
+                              color: widget.textFieldIconColor,
+                            ),
                     ),
+                    builder: (context, widget) {
+                      ///Using Transform.rotate to rotate the suffix icon when it gets expanded
+                      return Transform.rotate(
+                        angle: _con.value * 2.0 * pi,
+                        child: widget,
+                      );
+                    },
+                    animation: _con,
                   ),
                 ),
               ),
