@@ -63,10 +63,10 @@ class AnimSearchBar extends StatefulWidget {
 
     /// Height of wrapper container
     this.height = 100,
-    this.tamagnoIcono = 48,
+    this.tamagnoIcono = 24,
 
     /// choose your custom color
-    this.color = Colors.yellow,
+    this.color = Colors.white,
 
     /// choose your custom color for the search when it is expanded
     this.textFieldColor = Colors.white,
