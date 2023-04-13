@@ -72,10 +72,10 @@ class AnimSearchBar extends StatefulWidget {
     this.textFieldColor = Colors.white,
 
     /// choose your custom color for the search when it is expanded
-    this.searchIconColor = Colors.blueGrey,
+    this.searchIconColor = Colors.black,
 
     /// choose your custom color for the search when it is expanded
-    this.textFieldIconColor = Colors.blueGrey,
+    this.textFieldIconColor = Colors.black,
     this.textInputAction = TextInputAction.done,
 
     /// The onSuffixTap cannot be null
@@ -181,7 +181,7 @@ class _AnimSearchBarState extends State<AnimSearchBar>
             ///Using Animated Positioned widget to expand and shrink the widget
             Positioned.fill(
               child: Align(
-                alignment: Alignment.center,
+                alignment: Alignment.centerRight,
                 child: AnimatedPositioned(
                   duration:
                       Duration(milliseconds: widget.animationDurationInMilli),
