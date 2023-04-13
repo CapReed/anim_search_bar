@@ -75,7 +75,7 @@ class AnimSearchBar extends StatefulWidget {
     this.searchIconColor = Colors.black,
 
     /// choose your custom color for the search when it is expanded
-    this.textFieldIconColor = Colors.red,
+    this.textFieldIconColor = Colors.black,
     this.textInputAction = TextInputAction.done,
 
     /// The onSuffixTap cannot be null
