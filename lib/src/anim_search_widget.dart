@@ -235,7 +235,8 @@ class _AnimSearchBarState extends State<AnimSearchBar>
                           : Icon(
                               Icons.close,
                               size: 20.0,
-                              color: widget.textFieldIconColor,
+                              // color: widget.textFieldIconColor,
+                              color: Colors.orange,
                             ),
                     ),
                     builder: (context, widget) {
