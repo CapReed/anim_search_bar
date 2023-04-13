@@ -69,7 +69,7 @@ class AnimSearchBar extends StatefulWidget {
     this.color = Colors.white,
 
     /// choose your custom color for the search when it is expanded
-    this.textFieldColor = Colors.red,
+    this.textFieldColor = Colors.white,
 
     /// choose your custom color for the search when it is expanded
     this.searchIconColor = Colors.black,
@@ -261,14 +261,9 @@ class _AnimSearchBarState extends State<AnimSearchBar>
                 opacity: (toggle == 0) ? 0.0 : 1.0,
                 duration: Duration(milliseconds: 200),
                 child: Container(
-                  padding: const EdgeInsets.only(
-                    left: 8,
-                    right: 12,
-                  ),
-                  width: widget.width,
+                  padding: const EdgeInsets.only(left: 8, right: 12),
+                  width: widget.width / 1.5,
                   child: TextField(
-                    textAlignVertical: TextAlignVertical.center,
-
                     ///Text Controller. you can manipulate the text inside this textField by calling this controller.
                     controller: widget.textController,
                     inputFormatters: widget.inputFormatters,
