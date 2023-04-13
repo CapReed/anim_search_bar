@@ -252,7 +252,7 @@ class _AnimSearchBarState extends State<AnimSearchBar>
             ),
             AnimatedPositioned(
               duration: Duration(milliseconds: widget.animationDurationInMilli),
-              left: (toggle == 0) ? 20.0 : 32.0,
+              left: (toggle == 0) ? 20.0 : 40.0,
               curve: Curves.easeOut,
               top: 11.0,
 
