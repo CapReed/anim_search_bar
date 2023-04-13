@@ -269,7 +269,7 @@ class _AnimSearchBarState extends State<AnimSearchBar>
                 child: Container(
                   padding: const EdgeInsets.only(left: 8, right: 12),
                   alignment: Alignment.topCenter,
-                  width: widget.width / 1.7,
+                  width: widget.width / 1.5,
                   child: TextField(
                     ///Text Controller. you can manipulate the text inside this textField by calling this controller.
                     controller: widget.textController,
