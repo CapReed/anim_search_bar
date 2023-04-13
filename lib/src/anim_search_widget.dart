@@ -63,7 +63,7 @@ class AnimSearchBar extends StatefulWidget {
 
     /// Height of wrapper container
     this.height = 100,
-    this.tamagnoIcono = 48,
+    this.tamagnoIcono = 40,
 
     /// choose your custom color
     this.color = Colors.white,
@@ -252,7 +252,7 @@ class _AnimSearchBarState extends State<AnimSearchBar>
             ),
             AnimatedPositioned(
               duration: Duration(milliseconds: widget.animationDurationInMilli),
-              left: (toggle == 0) ? 20.0 : 32.0,
+              left: (toggle == 0) ? 20.0 : 40.0,
               curve: Curves.easeOut,
               top: 11.0,
 
